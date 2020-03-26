@@ -1,6 +1,7 @@
 # HTML & CSS
 
 Cheat-sheet for HTML & CSS syntax.
+For Markdown preview use ctrl + shift + v
 
 **Meta tags**
 
@@ -17,22 +18,22 @@ Meta tags are needed for certain features of the web page.
 	<!-- For browser compatibility -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<!-- Description of the site -->
+	<!-- Description of the site - shown in the search engine -->
 	<meta name="description" content="This is my web-site description">
 
-	<!-- Keywords -->
+	<!-- Keywords, around eight or so -->
 	<meta name="keywords" content="web development, coding, web design">
 
-	<!-- For not indexing -->
+	<!-- For not indexing on search engines -->
 	<meta name="robots" content="NOINDEX, NOFOLLOW">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="./style.css">
 
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
 
-	<!-- Title-->
+	<!-- Title is what is shown in the search engine -->
 	<title>My web-site title</title>
 </head>
 ```
@@ -55,6 +56,33 @@ There are plenty of them, but these are the most used ones.
 <aside>
 
 <footer>
+
+<!-- Other useful tags -->
+
+<p>
+
+<span>
+
+<em>
+
+<strong>
+
+<br>
+
+<ol><li>
+
+<ul><li>
+
+<!-- Images -->
+<img scr="img/image.png" alt="My Image">
+<img scr="https://source.unsplash.com/200x200/?surf" alt="My Image">
+
+<!-- Links -->
+<a href="digitalcollars.com" target="_blank">Go to my webpage</a>
+<a href="/about.html">About</a>
+
+<video scr="youtube.com">
+
 ```
 
 **CSS**
@@ -77,10 +105,46 @@ There are plenty of them, but these are the most used ones.
 
 		<!-- Padding is the space inside of the border -->
 		padding: 10px;
+
+		<!-- Shorthand = top, right, bottom, left -->
+		<!-- Shorthand = top/bottom, left/right -->
 	}
 
+	/* Fonts */
 	body{
-		font-family: 'Roboto', sans-serif;
+		background-image: url('./img/background.jpg')
+		color: #fff;
+		height: 300px;
+		width: 600px;
+	}
+
+	/* Backgrounds */
+	body{
+		font-family: 'Inter', sans-serif;
+		font-size: 18x;
+	}	
+
+	/* Borders */
+	#box{
+		background-color: white;
+		border: 3px solid red;
+		border-radius: 10px;
+	}
+
+	/* Buttons */
+	.btn{
+		background: blue;
+		color: white;
+		border: none;
+		font-size: 10px;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.btn:hover{
+		background: green;
+		color: grey;
 	}
 
 </style>
@@ -88,7 +152,7 @@ There are plenty of them, but these are the most used ones.
 
 **Responsive design**
 
-Media queries
+1. Media queries
 
 ```html
 <style>
@@ -112,10 +176,20 @@ Media queries
 		}
 	}
 
+	/* rem units - root element is always 16px */
+	#box{
+		font-size: 2rem;
+	}
+
+	/* Changing root element */
+	html{
+		font-size: 10px;
+	}
+
 </style>
 ```
 
-View-ports
+2. View-ports
 
 ```html
 <style>
@@ -174,3 +248,10 @@ View-ports
 	</div>
 </body>
 ```
+
+**VSCode shortcuts**
+
+- Copy entire line up/down: Shift + Alt + Arrows
+- Move entire line up/down: Alt + Arrows
+- Move word by word: Ctrl + Arrows
+- Comment entire line: Ctrl + Shift + /
