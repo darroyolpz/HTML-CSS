@@ -61,6 +61,8 @@ There are plenty of them, but these are the most used ones.
 
 <p>
 
+<i>
+
 <span>
 
 <em>
@@ -89,6 +91,13 @@ There are plenty of them, but these are the most used ones.
 
 ```html
 <style>
+
+	/* Reset all the CSS to start from scratch */
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
 
 	/* . is for classes */
 	.primary-heading{
